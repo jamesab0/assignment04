@@ -93,11 +93,58 @@ print(f"{f:e}")      # scientific notation
 ---
 ## String Formatting
 ### C99 printf
+```C
+#include <stdio.h>
 
-
+int main() {
+  char s[] = "Hello";
+  char t[] = "World";
+  printf("%-10s!\n", s); // width 10, left-aligned
+  printf("%10s!\n", s);  // width 10, right-aligned
+  strcat(s, t);
+  printf("%s\n", s);     // concatenate strings
+  return 0;
+}
+```
+#### Output:
+```C
+Hello     !
+     Hello!
+HelloWorld
+```
 ### Python print
 #### Old-style (%) formatting
 ```Python
+s = "Hello"
+print("%-10s!" % s)                                # width 10, left-aligned
+print("%10s!" % s)                                 # width 10, right-aligned
+print("%*s" % (10 - (10 - len(s)) // 2, s), "!")   # width 10, center-aligned
 ```
-###
+#### Output:
+```Python
+Hello     !
+     Hello!
+  Hello  !
+```
+#### F-strings
+```Python
+s = "Hello"
+t = "World"
+print(f"{s:<10}!")   # width 10, left aligned
+print(f"{s:>10}!")   # width 10, right aligned
+print(f"{s:^10}!")   # width 10, center aligned
+print(f"{s:0>10}!")  # width 10, pad with zeroes
+print(s + t)         # concatenate strings
+```
+#### Output:
+```Python
+Hello     !
+     Hello!
+  Hello   !
+00000Hello!
+HelloWorld
+```
 
+---
+| Type | Example Code (C) | Example Code (Python) | Output |
+|------|
