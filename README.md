@@ -146,5 +146,12 @@ HelloWorld
 ```
 
 ---
+## Table of Examples
 | Type | Example Code (C) | Example Code (Python) | Output |
-|------|
+|-----|-----|-----|-----|
+| int |<pre><code>printf("%5d", 42)</code></pre>|<pre><code>print("%5d" % 42)</code></pre>| <pre><code>42</code></pre>|
+| int |
+|float|
+|float|
+|string|
+|string|
