@@ -149,9 +149,10 @@ HelloWorld
 ## Table of Examples
 | Type | Example Code (C) | Example Code (Python) | Output |
 |-----|-----|-----|-----|
-| int |<pre><code>printf("%5d", 42)</code></pre>|<pre><code>print("%5d" % 42)</code></pre>| <pre><code>42</code></pre>|
-| int |
-|float|
-|float|
-|string|
-|string|
+| int |<pre><code>printf("%5d", 42);</code></pre>|<pre><code>print("%5d" % 42)</code></pre>|<pre>   42</pre>|
+| int |<pre><code>printf("%+5d", 42);</code></pre>|<pre><code>print("%+5d" % 42)</code></pre>|<pre>  +42</pre>|
+| int |<pre><code>printf("%05d", 42);</code></pre>|<pre><code>print("%05d" % 42)</code></pre>|<pre>00042</pre>|
+|float|<pre><code>printf("%8.2f", 3.14159);</code></pre>|<pre><code>print("%8.2f" % 3.14159)</code></pre>|<pre>    3.14</pre>|
+|float|<pre><code>printf("%e", 3.14159);</code></pre>|<pre><code>print("%e" % 3.14159)</code></pre>|<pre>3.141590e+00</pre>|
+|string|<pre><code>printf("%-10s!", "Hello");</code></pre>|<pre><code>print("%-10s" % "Hello")</code></pre>|<pre></pre>|
+|string|<pre><code>printf("%e", 3.14159);</code></pre>|<pre><code>print("%e" % 3.14159)</code></pre>|<pre>3.141590e+00</pre>|
