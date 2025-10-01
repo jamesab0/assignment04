@@ -1,6 +1,7 @@
 # Python vs C99 Format Comparison
-This is a document comparing C99 printf and Python print.
-> This is a block quote
+This is a document comparing C99 printf and Python print, both Old-style (%) formatting and F-strings. It will explore integers, floats, and strings formatted in different ways. Proper formatting ensures clean output and sufficient readability.
+> String formatting is essential in Python [and C] for creating dynamic and well-structured text by inserting values into strings. <br>
+[Source](https://realpython.com/python-string-formatting)
 
 
 ---
@@ -146,7 +147,7 @@ HelloWorld
 ```
 
 ---
-## Table of Examples
+## Comparison Table
 | Type | Example Code (C) | Example Code (Python) | Output |
 |-----|-----|-----|-----|
 | int |<pre><code>printf("%5d", 42);</code></pre>|<pre><code>print("%5d" % 42)</code></pre>|<pre>   42</pre>|
@@ -154,5 +155,15 @@ HelloWorld
 | int |<pre><code>printf("%05d", 42);</code></pre>|<pre><code>print("%05d" % 42)</code></pre>|<pre>00042</pre>|
 |float|<pre><code>printf("%8.2f", 3.14159);</code></pre>|<pre><code>print("%8.2f" % 3.14159)</code></pre>|<pre>    3.14</pre>|
 |float|<pre><code>printf("%e", 3.14159);</code></pre>|<pre><code>print("%e" % 3.14159)</code></pre>|<pre>3.141590e+00</pre>|
-|string|<pre><code>printf("%-10s!", "Hello");</code></pre>|<pre><code>print("%-10s" % "Hello")</code></pre>|<pre></pre>|
-|string|<pre><code>printf("%e", 3.14159);</code></pre>|<pre><code>print("%e" % 3.14159)</code></pre>|<pre>3.141590e+00</pre>|
+|string|<pre><code>printf("%-10s!", "Hello");</code></pre>|<pre><code>print("%-10s" % "Hello")</code></pre>|<pre>Hello     !</pre>|
+|string|<pre><code>printf("%10s!", "Hello");</code></pre>|<pre><code>print("%10s" % "Hello")</code></pre>|<pre>     Hello!</pre>|
+
+---
+## Useful Links
+[C99 printf documentation](https://en.cppreference.com/w/c/io/fprintf) <br>
+[Python old-style % formatting](https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting) <br>
+[Python f-strings](https://docs.python.org/3/reference/lexical_analysis.html#f-strings) <br>
+
+---
+## Image
+![My Required Image](https://thunderdungeon.com/wp-content/uploads/2024/05/microsoft-office-memes-4-5-21-2024.jpg)
